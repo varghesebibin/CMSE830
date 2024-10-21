@@ -1,8 +1,10 @@
 # CMSE 830 Midsemester Project
 
-This repository contains the **House Price Prediction** project for the CMSE 830 Midsemester assessment, along with a secondary analysis focused on US macroeconomic indicators such as unemployment rate and industrial production. The project involves predicting house prices using Ridge and Lasso regression models, performing detailed model building and evaluation, as well as analyzing the US economy post-2000 using key economic indicators.
+This repository contains the **House Price Prediction** project for the CMSE 830 Midsemester assessment, along with a secondary analysis focused on US macroeconomic indicators such as unemployment rate and industrial production. The project involves predicting house prices using Ridge and Lasso regression models, performing detailed model building and evaluation, as well as analyzing the US economy using key economic indicators.
 
-![House Price Prediction Visualization]("C:\Users\Bibin\Documents\GitHub\CMSE830_Midsemester_Project\house prediction model.png")
+<p align="center">
+  <img src="https://github.com/varghesebibin/CMSE830_Midsemester_Project/blob/main/house%20prediction%20model.png?raw=true" alt="House Price Prediction Visualization" width="600"/>
+</p>
 
 ## Table of Contents
 
@@ -16,11 +18,10 @@ This repository contains the **House Price Prediction** project for the CMSE 830
 - [Technologies Used](#technologies-used)
 - [Visualizations](#visualizations)
 - [Notebook Sections](#notebook-sections)
-- [License](#license)
 
 ## Introduction
 
-The **House Price Prediction** project focuses on analyzing and predicting house prices using a dataset that includes several features, such as `OverallQual`, `GrLivArea`, `GarageCars`, `TotalBsmtSF`, and more. Additionally, a second analysis explores key US macroeconomic indicators, including the unemployment rate and industrial production for the years post-2000.
+The **House Price Prediction** project focuses on analyzing and predicting house prices using a dataset that includes several features, such as `OverallQual`, `GrLivArea`, `GarageCars`, `TotalBsmtSF`, and more. Additionally, a second analysis explores key US macroeconomic indicators, including the unemployment rate and industrial production.
 
 This repository includes:
 
@@ -45,7 +46,7 @@ The project utilizes two distinct datasets:
    - This dataset contains house price data, including several numerical and categorical features. The dataset is used to predict house prices using Ridge and Lasso regression models.
    
 2. **US Macroeconomic Indicators Dataset** (from Kaggle):
-   - [Kaggle Dataset: US Key Macroeconomic Indicators](https://www.kaggle.com/datasets/calven22/usa-key-macroeconomic-indicators)
+   - <a href="https://www.kaggle.com/datasets/calven22/usa-key-macroeconomic-indicators" target="_blank">Kaggle Dataset: US Key Macroeconomic Indicators</a>
    - This dataset contains macroeconomic data, including the unemployment rate and industrial production, which are analyzed for trends post-2000. The analysis provides insights into how these factors have influenced the US economy.
 
 ## Features
@@ -92,7 +93,7 @@ To run the **Streamlit** app, follow these steps:
     streamlit run application.py
     ```
 
-3. **Access the app**: Open your web browser and go to the local URL provided (usually `https://cmse830midsemesterproject-gxbhpk4wstunehwvrgvjgk.streamlit.app/`).
+3. **Access the app**: Open your web browser and go to the local URL provided (`https://cmse830midsemesterproject-gxbhpk4wstunehwvrgvjgk.streamlit.app/`).
 
 ## Key Insights
 
