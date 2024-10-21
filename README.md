@@ -2,7 +2,9 @@
 
 This repository contains the **House Price Prediction** project for the CMSE 830 Midsemester assessment, along with a secondary analysis focused on US macroeconomic indicators such as unemployment rate and industrial production. The project involves predicting house prices using Ridge and Lasso regression models, performing detailed model building and evaluation, as well as analyzing the US economy using key economic indicators.
 
-![House Price Prediction Visualization](https://github.com/varghesebibin/CMSE830_Midsemester_Project/blob/main/house%20prediction%20model.png?raw=true)
+<p align="center">
+  <img src="https://github.com/varghesebibin/CMSE830_Midsemester_Project/blob/main/house%20prediction%20model.png?raw=true" alt="House Price Prediction Visualization" width="600"/>
+</p>
 
 ## Table of Contents
 
