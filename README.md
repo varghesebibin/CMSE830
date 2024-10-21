@@ -2,7 +2,7 @@
 
 This repository contains the **House Price Prediction** project for the CMSE 830 Midsemester assessment, along with a secondary analysis focused on US macroeconomic indicators such as unemployment rate and industrial production. The project involves predicting house prices using Ridge and Lasso regression models, performing detailed model building and evaluation, as well as analyzing the US economy using key economic indicators.
 
-![House Price Prediction Visualization]("C:\Users\Bibin\Documents\GitHub\CMSE830_Midsemester_Project\house prediction model.png")
+<a href="https://www.kaggle.com/datasets/calven22/usa-key-macroeconomic-indicators" target="_blank">Kaggle Dataset: US Key Macroeconomic Indicators</a>
 
 ## Table of Contents
 
