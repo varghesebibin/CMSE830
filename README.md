@@ -19,7 +19,7 @@ This repository contains the **House Price Prediction** project for the CMSE 830
 
 ## Introduction
 
-The **House Price Prediction** project focuses on analyzing and predicting house prices using a dataset that includes several features, such as `OverallQual`, `GrLivArea`, `GarageCars`, `TotalBsmtSF`, and more. Additionally, a second analysis explores key US macroeconomic indicators, including the unemployment rate and industrial production for the years post-2000.
+The **House Price Prediction** project focuses on analyzing and predicting house prices using a dataset that includes several features, such as `OverallQual`, `GrLivArea`, `GarageCars`, `TotalBsmtSF`, and more. Additionally, a second analysis explores key US macroeconomic indicators, including the unemployment rate and industrial production.
 
 This repository includes:
 
