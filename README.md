@@ -16,7 +16,6 @@ This repository contains the **House Price Prediction** project for the CMSE 830
 - [Technologies Used](#technologies-used)
 - [Visualizations](#visualizations)
 - [Notebook Sections](#notebook-sections)
-- [License](#license)
 
 ## Introduction
 
