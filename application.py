@@ -49,6 +49,20 @@ best_alpha_ridge = 2.2229964825261956
 mae_ridge = 0.12011768180173615
 r2_ridge = 0.8187879636528907
 
+# **[Add basic documentation section in blue]**
+with st.expander("Show App Documentation"):
+    st.write("""
+        ## House Price Prediction App Documentation
+
+        This app predicts house prices using machine learning models, specifically Lasso and Ridge regression. The app can be useful for real estate agents and prospective homebuyers in Ames, Iowa, who are interested in reviewing historical house prices to aid in their decision-making process. It includes:
+        - Data Exploration: Overview of the dataset and statistical summary.
+        - Exploratory Data Analysis (EDA) and Visualization: Visualize key insights like distributions and correlations.
+        - Data Cleaning: Handling missing values, outliers and dropping duplicates.
+        - Feature Selection: Identify important features for prediction and encode and visualize the categorical features.
+        - Model Building: Train and evaluate machine learning models.
+        - Predict House Price: Predict house prices based on user input for key features.
+    """)
+
 # Sidebar navigation
 st.sidebar.title("Navigation")
 sections = st.sidebar.radio("Go to", ['Data Exploration', 'EDA and Visualization', 'Data Cleaning',
@@ -75,14 +89,15 @@ elif sections == 'EDA and Visualization':
     sns.histplot(df['SalePrice'], kde=True, ax=ax)
     st.pyplot(fig)
 
-    st.write("### Correlation Heatmap (Seaborn)")
-    corr = df.select_dtypes(include=[np.number]).corr()
-    fig, ax = plt.subplots(figsize=(10, 8))
-    sns.heatmap(corr, ax=ax, cmap='coolwarm', annot=False)
-    st.pyplot(fig)
+    
+    st.write("""
+        ### Label Encoding for Categorical Variables
+        Label encoding was applied to convert categorical variables into numerical representations. This step is essential for preparing the data for machine learning models. For example, categorical columns like `MSZoning` and `Neighborhood` were encoded numerically to allow the model to interpret them.
+    """)
 
     st.write("### Correlation Heatmap (Altair)")
     # Convert correlation matrix to long-form data
+    corr = df.select_dtypes(include=[np.number]).corr()
     corr_df = corr.stack().reset_index()
     corr_df.columns = ['Feature1', 'Feature2', 'Correlation']
 
@@ -108,10 +123,14 @@ elif sections == 'EDA and Visualization':
     st.pyplot(fig)
 
     # HiPlot Visualization
-    st.write("### High-dimensional Data Visualization with HiPlot")
-    # Select features for HiPlot
-    hi_features = ['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars', 'TotalBsmtSF', 'YearBuilt']
-    hip_exp = hip.Experiment.from_dataframe(df[hi_features])
+    st.write("### High-dimensional Data Visualization with HiPlot (Binned Categories)")
+
+    # Adding color based on SalePrice to see how features impact prices
+    hip_df = df[['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars', 'TotalBsmtSF', 'YearBuilt']]
+    hip_df['SalePrice_Category'] = pd.qcut(hip_df['SalePrice'], q=4, labels=['Low', 'Medium', 'High', 'Very High'])
+
+    # Display the HiPlot with color-coded sale price categories
+    hip_exp = hip.Experiment.from_dataframe(hip_df)
 
     # Generate HiPlot HTML
     hi_html = hip_exp.to_html(notebook_display=False)
@@ -132,6 +151,7 @@ elif sections == 'Data Cleaning':
 
     st.write("Data cleaning steps performed:")
     st.write("""
+    - Removed duplicate values using drop_duplicates()
     - Replaced missing values in features where 'NaN' indicates absence with 'None'.
     - Filled numerical missing values with median.
     - Dropped columns or rows with excessive missing data.
@@ -185,7 +205,7 @@ elif sections == 'Feature Selection':
     # Dummy feature importance (replace with actual importance if available)
     importance = pd.DataFrame({
         'Feature': selected_features,
-        'Importance': [0.8, 0.7, 0.65, 0.6, 0.5]
+        'Importance': [0.8, 0.7, 0.65, 0.6, 0.52]
     })
     fig, ax = plt.subplots()
     sns.barplot(x='Importance', y='Feature', data=importance, ax=ax)
