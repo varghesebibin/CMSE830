@@ -49,6 +49,109 @@ The project utilizes two distinct datasets:
    - <a href="https://www.kaggle.com/datasets/calven22/usa-key-macroeconomic-indicators" target="_blank">Kaggle Dataset: US Key Macroeconomic Indicators</a>
    - This dataset contains macroeconomic data, including the unemployment rate and industrial production, which are analyzed for trends post-2000. The analysis provides insights into how these factors have influenced the US economy.
 
+---
+
+## Data Description
+
+### 1. **House Price Prediction Dataset (train.csv)**
+
+This dataset includes 81 features that can be used to predict house prices. Each row represents a house, and the columns represent various attributes of the house. Here are the details:
+
+#### Target Variable
+- **SalePrice**: The target variable representing the final price of each home.
+
+#### House Characteristics
+- **MSSubClass**: Type of dwelling.
+- **MSZoning**: General zoning classification.
+- **LotFrontage**: Linear feet of street connected to the property.
+- **LotArea**: Lot size in square feet.
+- **Street**: Type of road access.
+- **Alley**: Type of alley access.
+- **LotShape**: General shape of the property.
+- **LandContour**: Flatness of the property.
+- **Utilities**: Type of utilities available.
+- **LotConfig**: Lot configuration.
+- **LandSlope**: Slope of the property.
+- **Neighborhood**: Physical locations within Ames city limits.
+- **Condition1**: Proximity to various conditions (e.g., Railroad).
+- **Condition2**: Proximity to second conditions.
+- **BldgType**: Type of dwelling (e.g., Single-family, Townhouse).
+- **HouseStyle**: Style of dwelling (1-story, 2-story).
+
+#### Building Characteristics
+- **OverallQual**: Rates overall material and finish of the house.
+- **OverallCond**: Rates overall condition of the house.
+- **YearBuilt**: Year the house was built.
+- **YearRemodAdd**: Year of most recent remodel.
+- **RoofStyle**: Type of roof.
+- **RoofMatl**: Roof material.
+- **Exterior1st**: Exterior covering on the house.
+- **Exterior2nd**: Exterior covering on the house.
+- **MasVnrType**: Masonry veneer type.
+- **MasVnrArea**: Masonry veneer area in square feet.
+- **ExterQual**: Quality of exterior material.
+- **ExterCond**: Condition of the material on the exterior.
+- **Foundation**: Type of foundation.
+
+#### Basement Features
+- **BsmtQual**: Quality of the basement.
+- **BsmtCond**: General condition of the basement.
+- **BsmtExposure**: Walkout or garden-level basement walls.
+- **BsmtFinType1**: Quality of finished area in the basement.
+- **BsmtFinSF1**: Type 1 finished square feet in the basement.
+- **BsmtFinType2**: Quality of second finished area.
+- **BsmtFinSF2**: Type 2 finished square feet.
+- **BsmtUnfSF**: Unfinished square feet in the basement.
+- **TotalBsmtSF**: Total square feet of basement area.
+
+#### Flooring and Living Area
+- **1stFlrSF**: First-floor square feet.
+- **2ndFlrSF**: Second-floor square feet.
+- **GrLivArea**: Above-grade (ground) living area in square feet.
+
+#### Bathroom and Bedroom Features
+- **FullBath**: Full bathrooms above grade.
+- **HalfBath**: Half bathrooms above grade.
+- **BedroomAbvGr**: Bedrooms above grade.
+- **KitchenAbvGr**: Kitchens above grade.
+- **TotRmsAbvGrd**: Total rooms above grade.
+
+#### Garage Features
+- **GarageType**: Location of the garage.
+- **GarageYrBlt**: Year garage was built.
+- **GarageFinish**: Interior finish of the garage.
+- **GarageCars**: Size of garage in car capacity.
+- **GarageArea**: Size of garage in square feet.
+- **GarageQual**: Garage quality.
+- **GarageCond**: Garage condition.
+
+#### Other Features
+- **Fireplaces**: Number of fireplaces.
+- **PavedDrive**: Paved driveway.
+- **PoolArea**: Pool area in square feet.
+- **Fence**: Fence quality.
+- **MiscFeature**: Miscellaneous features.
+- **SaleType**: Type of sale.
+- **SaleCondition**: Condition of sale.
+
+### 2. **US Macroeconomic Indicators Dataset (Secondary Data)**
+
+This dataset provides key macroeconomic indicators for the United States, focusing on data points from 1981 onwards. The dataset contains various economic indicators that reflect trends in unemployment, industrial production, and other important economic factors. Here are the main features:
+
+- **DATE**: The date corresponding to each row of economic indicators (monthly data).
+- **unrate**: The unemployment rate, reflecting the percentage of the total labor force that is unemployed and actively seeking employment.
+- **psr**: Personal savings rate, indicating the percentage of disposable income saved by individuals.
+- **m2**: M2 money stock, which includes cash, checking deposits, and easily convertible near money.
+- **dspic**: Disposable personal income in billions of dollars.
+- **pce**: Personal consumption expenditures in billions of dollars, representing consumer spending.
+- **reer**: Real effective exchange rate (REER), which measures the value of a currency against a basket of others, adjusted for inflation.
+- **ir**: Interest rates, indicating the cost of borrowing money.
+- **ffer**: Federal Funds Effective Rate, the interest rate at which depository institutions lend balances to each other overnight.
+- **tcs**: Total consumer spending.
+- **indpro**: Industrial production index, measuring the output of industries like manufacturing, mining, and utilities in the US economy.
+- **ccpi**: Consumer Price Index (CPI), a measure of the weighted average of prices of a basket of consumer goods and services, adjusted for inflation.
+
+
 ## Features
 
 - **Data Exploration**: Interactive exploration of key features in the dataset using visualizations and statistical summaries.
