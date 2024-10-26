@@ -32,9 +32,9 @@ df = load_data()
 # Load the optimized models
 @st.cache_resource
 def load_models():
-    with open('lasso_model_5vars_opt.pkl', 'rb') as file:
+    with open('Models/lasso_model_5vars_opt.pkl', 'rb') as file:
         lasso_model_opt = pickle.load(file)
-    with open('ridge_model_5vars_opt.pkl', 'rb') as file:
+    with open('Models/ridge_model_5vars_opt.pkl', 'rb') as file:
         ridge_model_opt = pickle.load(file)
     return lasso_model_opt, ridge_model_opt
 
